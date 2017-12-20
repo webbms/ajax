@@ -87,7 +87,7 @@ function httpAjax(options) {
     var timer = setTimeout(function(){
         timeout = true;
         console.log('Ajax timeout!')
-        request.abort();//请求中止
+        xhr.abort();//请求中止
     },options.timeout);
 }
 /**
