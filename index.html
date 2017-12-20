@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>封装原生ajax</title>
+	</head>
+	<body>
+		<script src="httpAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+httpAjax({
+    url:"**", //请求地址
+    type:'post',   //请求方式
+    data:"", //请求参数,可以是对象，也可以是字符串（多个字符串用&隔开"a=123&b=456"）
+    timeout:3000,//超时设置
+    dataType:"json",     // 返回值类型的设定
+    async:false,   //是否异步
+    success:function (response,xml) {
+        console.log(response);   //   此处执行请求成功后的代码
+    },
+    error:function (status) {
+        console.log('状态码为'+status);   // 此处为执行成功后的代码
+    }
+
+});
+		</script>
+	</body>
+</html>
